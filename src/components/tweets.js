@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import Tweet from "./tweet";
 
-// Initialize Twit to make requests to Twitter APIs
-
 const Tweets = () => {
   // useEffect(() => {
   //   getTweets();
