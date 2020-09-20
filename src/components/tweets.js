@@ -1,22 +1,17 @@
-import React, { useEffect } from "react";
-import Tweet from "./tweet";
+import React from "react";
 
-const Tweets = () => {
-  // useEffect(() => {
-  //   getTweets();
-  // }, [getTweets]);
+import { Tweet } from "react-twitter-widgets";
 
-  return (
-    <div>
-      <div className="tweets">
-        <Tweet
-          link="https://www.google.com"
-          content="testing"
-          id="1231d2ed12e"
-        />
+const Tweets = ({ tweetList }) => {
+  if (tweetList.length > 0) {
+    return (
+      <div className="tweet-container">
+        {tweetList.map((tweet, index) => (
+          <Tweet key={index} tweetId={tweet.id_str} />
+        ))}
       </div>
-    </div>
-  );
+    );
+  }
 };
 
 export default Tweets;
