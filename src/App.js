@@ -79,9 +79,11 @@ const App = () => {
     <div className="main-container">
       <Navbar />
       <form className="input-container" onSubmit={(e) => onSubmit(e)}>
-        Input Twitter handle here:{" "}
-        <input type="text" name="twitterID" onChange={(e) => onChange(e)} />
-        <input type="submit" value="Submit" />
+        <h3>
+          Input Twitter ID:{" "}
+          <input type="text" name="twitterID" onChange={(e) => onChange(e)} />
+          <input type="submit" value="Submit" />
+        </h3>
       </form>
       {errorMessage.err ? (
         <div className="errorMessage">{errorMessage.message}</div>
@@ -92,7 +94,10 @@ const App = () => {
       {tweetList.length > 0 ? (
         <Tweets tweetList={tweetList} />
       ) : (
-        <p>No Tweets found</p>
+        <p>
+          No Tweets found, either you have not yet input a twitter ID above or
+          there was no results for the ID provided
+        </p>
       )}
     </div>
   );

@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav>
-      <h1>Tweet App</h1>
+      <h1 className="navbar-title">Tweet App</h1>
     </nav>
   );
 };
