@@ -2,6 +2,12 @@
 
 Input a twitter handle and click on submit to see the 10 latest tweets made by the user
 
+### `To Dos`
+
+- [ ] unit tests
+- [ ] Add more comments
+
+
 ### `Before running this app`
 
 You will need a Developer account on twitter to run this app
