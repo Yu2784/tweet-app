@@ -1,6 +1,7 @@
 const http = require("http");
 const express = require("express");
 const socketIO = require("socket.io");
+require("dotenv").config();
 
 let app = express();
 let server = http.createServer(app);
@@ -9,14 +10,13 @@ let io = socketIO(server);
 app.use(express.json());
 
 const Twit = require("twit");
-// Initialize twit with api keys, Normally I would use dotenv so that the keys
-// arent publickly shared, however hitting an issue where keys were unable to
-// be retrieved
+
+// Initialize Twit with twitter API keys
 const T = new Twit({
-  consumer_key: "M9sH0OSwidJ3tK2c2Y5gpQa8U",
-  consumer_secret: "HCYTKAUGYiaEVMOG2jj0LLP9RuvOdCUCue98l9N8mkgbdlo3m1",
-  access_token: "7207442-GFHbOBcY9LCkrzQhkcuuwtUULOwbZMoGiAjAFzzdUO",
-  access_token_secret: "t21nEWlLuNKh0cvwlcP3dvyPOA6tnM7Dee4hPHF1FDGPS",
+  consumer_key: process.env.CONSUMER_API_KEY,
+  consumer_secret: process.env.CONSUMER_API_SECRET,
+  access_token: process.env.ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 });
 
 let twitterId = "";
