@@ -1,4 +1,8 @@
-## Before running this app
+## Twitter app to retrieve 10 latest tweets by Twitter Handle
+
+Input a twitter handle and click on submit to see the 10 latest tweets made by the user
+
+### `Before running this app`
 
 You will need a Developer account on twitter to run this app
 You can follow the steps from https://dev.to/sumedhpatkar/beginners-guide-how-to-apply-for-a-twitter-developer-account-1kh7
