@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import socketIOClient from "socket.io-client";
 import axios from "axios";
-import Navbar from "./components/navbar";
-import Tweets from "./components/tweets";
+import Navbar from "./components/navbar/navbar";
+import Tweets from "./components/tweets/tweets";
 
 const App = () => {
   const [userId, setUserId] = useState("");
@@ -77,7 +77,7 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <Navbar />
+      <Navbar title="Tweet App" />
       <form className="input-container" onSubmit={(e) => onSubmit(e)}>
         <h3>
           Input Twitter ID:{" "}
@@ -91,14 +91,7 @@ const App = () => {
         <div />
       )}
 
-      {tweetList.length > 0 ? (
-        <Tweets tweetList={tweetList} />
-      ) : (
-        <p>
-          No Tweets found, either you have not yet input a twitter ID above or
-          there was no results for the ID provided
-        </p>
-      )}
+      <Tweets tweetList={tweetList} />
     </div>
   );
 };
