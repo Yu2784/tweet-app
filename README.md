@@ -5,7 +5,6 @@ Input a twitter handle and click on submit to see the 10 latest tweets made by t
 ### `To Dos`
 
 - [ ] unit tests
-- [ ] Add more comments
 
 
 ### `Before running this app`
