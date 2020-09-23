@@ -1,5 +1,7 @@
 import React from "react";
 
+// Form for handling user input and submission of twitter Handle
+// takes in the function for handling submit and when the text input is updated
 const Form = ({ onSubmit, onChange }) => {
   return (
     <form className="input-container" onSubmit={(e) => onSubmit(e)}>

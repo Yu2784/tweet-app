@@ -14,6 +14,7 @@ const App = () => {
   const [tweetList, setTweetList] = useState([]);
 
   // Handle Twitter ID submission to retrieve tweets
+  // clears the list from any previous searches
   const onSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage.err) {
@@ -23,6 +24,8 @@ const App = () => {
   };
 
   // Set userId to the inputted value
+  // Validates against the allowed characters for creating a twitter Handle (Requirements taken from twitter)
+  // returns error message if an invalid character is entered
   const onChange = (e) => {
     setUserId(e.target.value);
     var alphanumeric = /^[0-9a-zA-Z]+$/;
@@ -44,6 +47,7 @@ const App = () => {
     }
   };
 
+  // Send the twitter handle submitted by the user to the server
   const updateTwitterId = (twitterId) => {
     axios
       .post("/updateTwitterId", {
@@ -57,6 +61,7 @@ const App = () => {
       });
   };
 
+  // connect with the server to recieve the twitter feed list from the submitted handle
   useEffect(() => {
     const socket = socketIOClient("http://localhost:3000/");
 
