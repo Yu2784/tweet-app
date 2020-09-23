@@ -46,7 +46,5 @@ io.on("connection", (socket) => {
   getTwitterFeed();
 });
 
-module.exports.server = server.listen(3001, () => {
-  console.log("Server is up on port 3001");
-});
+module.exports.server = server.listen(3001);
 module.exports.app = app;
