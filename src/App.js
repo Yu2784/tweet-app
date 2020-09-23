@@ -3,6 +3,7 @@ import socketIOClient from "socket.io-client";
 import axios from "axios";
 import Navbar from "./components/navbar/navbar";
 import Tweets from "./components/tweets/tweets";
+import Form from "./components/form/form";
 
 const App = () => {
   const [userId, setUserId] = useState("");
@@ -78,13 +79,7 @@ const App = () => {
   return (
     <div className="main-container">
       <Navbar title="Tweet App" />
-      <form className="input-container" onSubmit={(e) => onSubmit(e)}>
-        <h3>
-          Input Twitter ID:{" "}
-          <input type="text" name="twitterID" onChange={(e) => onChange(e)} />
-          <input type="submit" value="Submit" />
-        </h3>
-      </form>
+      <Form onSubmit={onSubmit} onChange={onChange} />
       {errorMessage.err ? (
         <div className="errorMessage">{errorMessage.message}</div>
       ) : (
