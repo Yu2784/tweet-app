@@ -2,11 +2,6 @@
 
 Input a twitter handle and click on submit to see the 10 latest tweets made by the user
 
-### `To Dos`
-
-- [ ] unit tests
-
-
 ### `Before running this app`
 
 You will need a Developer account on twitter to run this app
@@ -37,3 +32,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The App.js is where you will be able to input a Twitter User ID and when you click on submit it will retrieve the 10 latest tweets of that user
 
 The server.js handles the communication with the Twitter API to search and retrieve tweets by the Twitter User ID provided from the front end client
+
+### `npm test`
+
+### `npm run test:watch`
+
+### `npm run test:coverage`
+
+Run the unit tests to check if all components are working as expected
+To Do
+
+- [ ] unit test for server and client communication
